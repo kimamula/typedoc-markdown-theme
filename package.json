@@ -1,0 +1,22 @@
+{
+  "name": "typedoc-markdown-theme",
+  "version": "0.0.1",
+  "description": "Markdown theme for TypeDoc",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kimamula/typedoc-markdown-theme.git"
+  },
+  "files": [
+    "bin",
+    "LICENSE"
+  ],
+  "author": "kimamula",
+  "license": "MIT"
+}
