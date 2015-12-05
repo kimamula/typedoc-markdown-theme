@@ -14,4 +14,4 @@ See TypeDoc documentation (http://typedoc.io/) to learn more about TypeDoc.
 
 ## What does it look like?
 
-You can see an example output for this module own at 'example' dir.
+You can see an example output at 'example' dir.

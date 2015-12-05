@@ -1,0 +1,15 @@
+{{#unless hideName}}{{{name}}}{{/unless ~}}
+{{#if typeParameters ~}}
+  <{{#each typeParameters}}{{#if @index}}, {{/if}}{{{name}}}{{/each}}>
+{{~/if~}}
+({{#each parameters ~}}
+  {{#if @index}}, {{/if~}}
+  {{#if flags.isRest}}...{{/if~}}
+  {{{name}}}
+  {{~#if flags.isOptional}}?{{/if~}}
+  {{#if defaultValue}} = {{{defaultValue}}}{{/if~}}
+  : {{#with type}}{{>type}}{{/with~}}
+{{/each}})
+{{~#if type ~}}
+  {{#if useArrow}}=>{{else}}:{{/if}} {{#with type}}{{>type}}{{/with~}}
+{{/if}}

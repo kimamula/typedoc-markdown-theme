@@ -1,0 +1,4 @@
+# {{{model.kindString}}} {{{model.name}}}
+{{~#if model.typeParameters ~}}
+  <{{#each model.typeParameters}}{{#if @index}}, {{/if}}{{{name}}}{{/each}}>
+{{~/if}}

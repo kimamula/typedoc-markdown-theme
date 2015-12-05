@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "declaration": false,
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "noEmitOnError": true
+  },
+  "files": [
+    "./src/theme.ts",
+    "./test/theme_test.ts",
+    "./typings/bundle.d.ts"
+  ]
+}

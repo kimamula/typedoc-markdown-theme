@@ -5,3 +5,7 @@ npm-debug.log*
 node_modules
 
 typings
+!typings/bundle.d.ts
+!typings/typedoc/typedoc.d.ts
+
+bin/theme.js

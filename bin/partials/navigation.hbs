@@ -1,0 +1,16 @@
+{{#if isVisible ~}}
+  {{#if isLabel ~}}
+    * {{{title}}}
+  {{~else~}}
+    {{#if isGlobals ~}}
+      * *[{{{title}}}]({{{relativeURL url}}})*
+    {{~else~}}
+      * [{{{title}}}]({{{relativeURL url}}})
+      {{~#if isInPath ~}}
+        {{#if children ~}}
+          {{#each children}}{{> navigation}}{{/each~}}
+        {{/if~}}
+      {{/if~}}
+    {{/if~}}
+  {{/if~}}
+{{/if}}

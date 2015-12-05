@@ -1,0 +1,44 @@
+{{#with model ~}}
+  {{#if hasComment}}{{> comment}}{{/if~}}
+{{/with~}}
+{{#if model.typeParameters ~}}
+  {{newLine}}{{newLine}}### Type parameters
+  {{~ newLine}}{{#with model}}{{> typeParameters}}{{/with~}}
+{{/if~}}
+{{#if model.extendedTypes ~}}
+  {{newLine}}{{newLine}}### Extends
+  {{~#each model.extendedTypes ~}}
+    {{newLine}}* {{> type ~}}
+  {{/each~}}
+{{/if~}}
+{{#if model.implementedTypes ~}}
+  {{newLine}}{{newLine}}### Implements
+  {{~#each model.implementedTypes ~}}
+    {{newLine}}* {{> type ~}}
+  {{/each~}}
+{{/if~}}
+{{#if model.implementedBy ~}}
+  {{newLine}}{{newLine}}### Implemented by
+  {{~#each model.implementedBy ~}}
+    {{newLine}}* {{> type ~}}
+  {{/each~}}
+{{/if~}}
+{{#if model.signatures ~}}
+  {{newLine}}{{newLine}}### Callable
+  {{~ newLine}}{{#with model}}{{> member.signatures}}{{/with~}}
+{{/if~}}
+{{#if model.indexSignature ~}}
+  {{newLine}}{{newLine}}### Indexable
+  {{~ newLine}}[
+  {{~#each model.indexSignature.parameters ~}}
+    {{{name}}}: {{#with type}}{{>type}}{{/with~}}
+  {{/each}}] {{#with model.indexSignature.type}}{{>type}}{{/with~}}
+  {{#with model.indexSignature ~}}
+    {{newLine}}{{> comment ~}}
+  {{/with~}}
+{{/if}}
+
+{{#with model}}
+  {{~> index}}
+  {{~> members ~}}
+{{/with}}

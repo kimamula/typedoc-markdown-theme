@@ -1,0 +1,19 @@
+{{#if signatures ~}}
+  {{#each signatures ~}}
+    {{#if @index}}; {{/if}}{{> member.signature.title useArrow=true hideName=true ~}}
+  {{/each~}}
+{{/if~}}
+{{#if indexSignature ~}}
+  [{{#each indexSignature.parameters ~}}
+    {{#if @index}}, {{/if}}{{#if flags.isRest}}...{{/if}}{{{name}}}: {{#with type}}{{>type}}{{/with~}}
+  {{/each}}]: {{#with indexSignature.type}}{{>type}}{{/with~}}
+{{/if~}}
+{{#each children ~}}
+  {{#if @first}}\{ {{~else}}, {{/if~}}
+  {{#if signatures ~}}
+    {{#if flags.isRest}}...{{/if}}{{{name}}}{{#if isOptional}}?{{/if}}: {{> member.signature.title useArrow=true hideName=true ~}}
+  {{else ~}}
+    {{#each flags}}{{{this}}} {{/each}}{{#if flags.isRest}}...{{/if}}{{{name}}}{{#if flags.isOptional}}?{{/if}}: {{#with type}}{{>type}}{{/with~}}
+  {{/if~}}
+  {{#if @last}}\} {{~/if~}}
+{{/each}}

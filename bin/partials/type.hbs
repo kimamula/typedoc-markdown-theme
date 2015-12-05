@@ -1,0 +1,37 @@
+{{#if this ~}}
+  {{#if reflection ~}}
+    [{{{reflection.name}}}]({{{relativeURL reflection.url}}})
+    {{~#if typeArguments ~}}
+      <{{#each typeArguments}}{{#if @index}}, {{/if}}{{> type}}{{/each}}>
+    {{~/if~}}
+    {{#if isArray}}[]{{/if~}}
+  {{else~}}
+    {{#if types ~}}
+      {{#each types}}{{#if @index}} | {{/if}}{{> type}}{{/each~}}
+    {{else~}}
+      {{#if elements ~}}
+        [{{#each elements}}{{#if @index}}, {{/if}}{{> type}}{{/each}}]
+      {{~else~}}
+        {{#if declaration ~}}
+          {{#with declaration}}{{> parameter}}{{/with~}}
+        {{else~}}
+          {{#if name ~}}
+            {{{name}}}
+          {{~else~}}
+            {{#if value ~}}
+              "{{{value}}}"
+            {{~else~}}
+              {{{this}}}
+            {{~/if~}}
+          {{/if~}}
+        {{/if~}}
+        {{#if typeArguments ~}}
+          <{{#each typeArguments}}{{#if @index}}, {{/if}}{{> type}}{{/each}}>
+        {{~/if~}}
+        {{#if isArray}}[]{{/if~}}
+      {{/if~}}
+    {{/if~}}
+  {{/if~}}
+{{else~}}
+  void
+{{~/if}}

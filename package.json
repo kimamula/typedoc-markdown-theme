@@ -4,7 +4,8 @@
   "description": "Markdown theme for TypeDoc",
   "main": "bin/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tsc && nodeunit ./test",
+    "prepublish": "npm test && mv ./src/theme.js ./bin"
   },
   "keywords": [
     "typescript"
@@ -18,5 +19,14 @@
     "LICENSE"
   ],
   "author": "kimamula",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "dtsm": "^0.13.0",
+    "handlebars": "^4.0.5",
+    "nodeunit": "^0.9.1",
+    "typescript": "1.6.2"
+  },
+  "dependencies": {
+    "typedoc": "^0.3.12"
+  }
 }
