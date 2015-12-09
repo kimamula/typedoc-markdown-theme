@@ -1,0 +1,208 @@
+# Class CallbackLogger
+A logger that calls a callback function.
+
+### Extends
+* [Logger](td.logger.md)
+
+## Index
+
+### Constructors
+* [constructor](td.callbacklogger.md#constructor)
+
+### Properties
+* [callback](td.callbacklogger.md#callback)
+* [errorCount](td.callbacklogger.md#errorcount)
+
+### Methods
+* [diagnostic](td.callbacklogger.md#diagnostic)
+* [diagnostics](td.callbacklogger.md#diagnostics)
+* [error](td.callbacklogger.md#error)
+* [hasErrors](td.callbacklogger.md#haserrors)
+* [log](td.callbacklogger.md#log)
+* [resetErrors](td.callbacklogger.md#reseterrors)
+* [success](td.callbacklogger.md#success)
+* [verbose](td.callbacklogger.md#verbose)
+* [warn](td.callbacklogger.md#warn)
+* [write](td.callbacklogger.md#write)
+* [writeln](td.callbacklogger.md#writeln)
+
+## Constructors
+
+### new CallbackLogger(callback: Function): [CallbackLogger](td.callbacklogger.md)
+Create a new CallbackLogger instance.  
+* Defined in [td/Logger.ts:212](https://github.com/kimamula/typedoc/blob/HEAD/src/td/Logger.ts#L212)
+
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| callback | Function| The callback that should be used to log messages. |
+
+#### Returns: [CallbackLogger](td.callbacklogger.md)
+
+## Properties
+
+### callback: Function
+This loggers callback function
+* Defined in [td/Logger.ts:212](https://github.com/kimamula/typedoc/blob/HEAD/src/td/Logger.ts#L212)
+
+
+### errorCount: number
+How many error messages have been logged?
+* Inherited from [Logger](td.logger.md).[errorCount](td.logger.md#errorcount)
+* Defined in [td/Logger.ts:32](https://github.com/kimamula/typedoc/blob/HEAD/src/td/Logger.ts#L32)
+
+
+## Methods
+
+### diagnostic(diagnostic: [Diagnostic](../interfaces/ts.diagnostic.md)): void
+Print the given TypeScript log message.  
+* Inherited from [Logger](td.logger.md).[diagnostic](td.logger.md#diagnostic)
+* Defined in [td/Logger.ts:149](https://github.com/kimamula/typedoc/blob/HEAD/src/td/Logger.ts#L149)
+
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| diagnostic | [Diagnostic](../interfaces/ts.diagnostic.md)| The TypeScript message that should be logged. |
+
+#### Returns: void
+
+### diagnostics(diagnostics: [Diagnostic](../interfaces/ts.diagnostic.md)[]): void
+Print the given TypeScript log messages.  
+* Inherited from [Logger](td.logger.md).[diagnostics](td.logger.md#diagnostics)
+* Defined in [td/Logger.ts:137](https://github.com/kimamula/typedoc/blob/HEAD/src/td/Logger.ts#L137)
+
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| diagnostics | [Diagnostic](../interfaces/ts.diagnostic.md)[]| The TypeScript messages that should be logged. |
+
+#### Returns: void
+
+### error(text: string, ...args: string[]): void
+Log the given error.  
+* Inherited from [Logger](td.logger.md).[error](td.logger.md#error)
+* Defined in [td/Logger.ts:113](https://github.com/kimamula/typedoc/blob/HEAD/src/td/Logger.ts#L113)
+
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| text | string| The error that should be logged. |
+| ...args | string[]| The arguments that should be printed into the given error. |
+
+#### Returns: void
+
+### hasErrors(): boolean
+Has an error been raised through the log method?  
+* Inherited from [Logger](td.logger.md).[hasErrors](td.logger.md#haserrors)
+* Defined in [td/Logger.ts:39](https://github.com/kimamula/typedoc/blob/HEAD/src/td/Logger.ts#L39)
+
+#### Returns: boolean
+
+### log(message: string, level =  LogLevel.Info: [LogLevel](../enums/td.loglevel.md), newLine?: boolean): void
+Print a log message.  
+* Overwrites [Logger](td.logger.md).[log](td.logger.md#log)
+* Defined in [td/Logger.ts:233](https://github.com/kimamula/typedoc/blob/HEAD/src/td/Logger.ts#L233)
+
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| message | string| The message itself. |
+| level =  LogLevel.Info | [LogLevel](../enums/td.loglevel.md)| The urgency of the log message. |
+| newLine? | boolean| Should the logger print a trailing whitespace? |
+
+#### Returns: void
+
+### resetErrors(): void
+Reset the error counter.  
+* Inherited from [Logger](td.logger.md).[resetErrors](td.logger.md#reseterrors)
+* Defined in [td/Logger.ts:47](https://github.com/kimamula/typedoc/blob/HEAD/src/td/Logger.ts#L47)
+
+#### Returns: void
+
+### success(text: string, ...args: string[]): void
+Log the given success message.  
+* Inherited from [Logger](td.logger.md).[success](td.logger.md#success)
+* Defined in [td/Logger.ts:80](https://github.com/kimamula/typedoc/blob/HEAD/src/td/Logger.ts#L80)
+
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| text | string| The message that should be logged. |
+| ...args | string[]| The arguments that should be printed into the given message. |
+
+#### Returns: void
+
+### verbose(text: string, ...args: string[]): void
+Log the given verbose message.  
+* Inherited from [Logger](td.logger.md).[verbose](td.logger.md#verbose)
+* Defined in [td/Logger.ts:91](https://github.com/kimamula/typedoc/blob/HEAD/src/td/Logger.ts#L91)
+
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| text | string| The message that should be logged. |
+| ...args | string[]| The arguments that should be printed into the given message. |
+
+#### Returns: void
+
+### warn(text: string, ...args: string[]): void
+Log the given warning.  
+* Inherited from [Logger](td.logger.md).[warn](td.logger.md#warn)
+* Defined in [td/Logger.ts:102](https://github.com/kimamula/typedoc/blob/HEAD/src/td/Logger.ts#L102)
+
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| text | string| The warning that should be logged. |
+| ...args | string[]| The arguments that should be printed into the given warning. |
+
+#### Returns: void
+
+### write(text: string, ...args: string[]): void
+Log the given message.  
+* Inherited from [Logger](td.logger.md).[write](td.logger.md#write)
+* Defined in [td/Logger.ts:58](https://github.com/kimamula/typedoc/blob/HEAD/src/td/Logger.ts#L58)
+
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| text | string| The message that should be logged. |
+| ...args | string[]| The arguments that should be printed into the given message. |
+
+#### Returns: void
+
+### writeln(text: string, ...args: string[]): void
+Log the given message with a trailing whitespace.  
+* Inherited from [Logger](td.logger.md).[writeln](td.logger.md#writeln)
+* Defined in [td/Logger.ts:69](https://github.com/kimamula/typedoc/blob/HEAD/src/td/Logger.ts#L69)
+
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ---- |
+| text | string| The message that should be logged. |
+| ...args | string[]| The arguments that should be printed into the given message. |
+
+#### Returns: void
+
+
+Generated using [TypeDoc](http://typedoc.io)
