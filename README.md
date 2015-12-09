@@ -7,7 +7,7 @@ This module enebles you to obtain a markdown version of the TypeDoc output.
 
 ```bash
 $ npm install typedoc typedoc-markdown-theme --save-dev
-$ typedoc --theme node_modules/.bin/typedoc-markdown-theme path/to/ts/dir
+$ typedoc --theme node_modules/typedoc-markdown-theme/bin path/to/ts/dir
 ```
 
 See TypeDoc documentation (http://typedoc.io/) to learn more about TypeDoc.
