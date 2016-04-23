@@ -14,4 +14,4 @@ See TypeDoc documentation (http://typedoc.io/) to learn more about TypeDoc.
 
 ## What does it look like?
 
-You can see an example output at 'example' dir.
+You can see an example output at [examples dir](https://github.com/kimamula/typedoc-markdown-theme/tree/master/examples).
