@@ -25,7 +25,6 @@ export default class MarkdownTheme extends td.output.DefaultTheme {
     renderer.removePlugin('assets'); // markdown doesn't need assets
     renderer.removePlugin('javascriptIndex'); // markdown doesn't need search.js
     renderer.removePlugin('prettyPrint'); // new lines and spaces have meaning in markdown, don't omit them automatically!
-    Handlebars.registerHelper('newLine', () => '\n');
   }
 
   isOutputDirectory(path: string): boolean {
