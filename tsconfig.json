@@ -9,6 +9,7 @@
   },
   "files": [
     "./src/theme.ts",
+    "./src/handlebars/newLine.ts",
     "./test/theme_test.ts",
     "./typings/bundle.d.ts"
   ]
